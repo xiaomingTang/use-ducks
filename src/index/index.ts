@@ -17,14 +17,12 @@ export function useDyingDuck(delayMs: number, xuMing = true): [boolean, () => vo
       if (timer !== -1) { // 存在timer则清空
         clearTimeout(timer)
       }
-      console.log("setTimeout")
       const tempTimer = window.setTimeout(() => {
         setIsDying(true)
         setTimer(-1)
       }, delayMs)
       setTimer(tempTimer)
     } else if (timer === -1) {
-      console.log("setTimeout")
       const tempTimer = window.setTimeout(() => {
         setIsDying(true)
         setTimer(-1)
